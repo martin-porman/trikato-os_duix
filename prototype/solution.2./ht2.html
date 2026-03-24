@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="et">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Trikato OS — Töövoog ja tööjärjekord">
+
+  <title>Trikato OS — Töövoog</title>
+
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+</head>
+
+<body>
+
+  <button class="rail-toggle" aria-label="Avamenüü" aria-expanded="false"><span class="rail-toggle-icon"></span></button>
+
+  <div class="layout">
+
+    <aside class="rail" role="navigation" aria-label="Põhinavigatsioon">
+
+      <div class="rail-inner">
+
+        <div class="rail-brand"><div class="rail-logo"><span class="rail-logo-mark" aria-hidden="true"></span>Trikato OS</div><div class="rail-tagline">Majandusarvestuse töötluskeskkond</div><div class="rail-intro">Operaatorevaade sissetulekule, pooleliolevatele töödele ja käsitsi kinnitustele.</div></div>
+
+        <nav class="rail-nav"><div class="rail-nav-label">Põhivaated</div><ul class="rail-nav-list"><li class="rail-nav-item"><a href="index.html" class="rail-nav-link">Töölaud</a></li><li class="rail-nav-item"><a href="toovoog.html" class="rail-nav-link active" aria-current="page">Töövoog</a></li><li class="rail-nav-item"><a href="vastavus.html" class="rail-nav-link">Vastavus</a></li><li class="rail-nav-item"><a href="klienditoimik.html" class="rail-nav-link">Klienditoimik</a></li></ul></nav>
+
+        <nav class="rail-page-nav"><div class="rail-nav-label">Lehekülg</div><ul class="rail-page-nav-list"><li><a href="#pooleli" class="rail-page-nav-link">Pooleli</a></li><li><a href="#sissetulek" class="rail-page-nav-link">Sissetulek</a></li><li><a href="#kinnitused" class="rail-page-nav-link">Vajab kinnitust</a></li><li><a href="#blokeeringud" class="rail-page-nav-link">Blokeeringud</a></li><li><a href="#periood" class="rail-page-nav-link">Perioodivaade</a></li></ul></nav>
+
+        <div class="rail-principle"><div class="rail-principle-label">Tööpõhimõte</div><p class="rail-principle-text">Töövoog ei ole lihtsalt loend. See on otsustamiskoht — iga rea juures pead teadma, mis on järgmine samm.</p></div>
+
+      </div>
+
+    </aside>
+
+    <main class="main"><div class="main-inner">
+
+      <header class="hero animate-in"><div class="hero-grid"><div><div class="eyebrow">Töövoog</div><h1 class="page-statement">Sinu päevane tööjärjekord</h1><p class="page-explanation">Siin näed kõike, mis on hetkel töös — alates sissetulevatest dokumentidest kuni kinnitamist vajavate aruanneteni.</p></div><aside class="hero-aside"><div class="hero-aside-title">Järjekorras kokku</div><ul class="hero-aside-list"><li class="hero-aside-item"><span>Aktiivseid</span><span class="hero-aside-value">48</span></li><li class="hero-aside-item"><span>Kinnituses</span><span class="hero-aside-value warning">14</span></li><li class="hero-aside-item"><span>Blokeeritud</span><span class="hero-aside-value danger">7</span></li></ul></aside></div></header>
+
+      <div class="filter-bar animate-in animate-delay-1"><button class="filter-chip active" data-filter="all">Kõik</button><button class="filter-chip" data-filter="bank">Pank</button><button class="filter-chip" data-filter="sales">Müük</button><button class="filter-chip" data-filter="purchase">Ost</button><button class="filter-chip" data-filter="salary">Palk</button><button class="filter-chip" data-filter="report">Aruanded</button></div>
+
+      <section id="pooleli" class="section animate-in animate-delay-2"><header class="section-header"><h2 class="section-title">Pooleli</h2><span class="text-muted">48 tööd</span></header><div class="work-card work-card-accent info"><div><h3 class="work-card-title">OÜ Mererand — Pangakanded</h3><p class="work-card-meta">Periood: 01.2025 · 47 kannet · Eeldatav aeg: 1,5h</p><p>Automatiseeritud import lõpetatud, vajab käsitsi klassifitseerimist: 12 kannet.</p></div><div><span class="badge badge-info">Pooleli</span><div class="mt-sm text-muted">Kadra Peterson</div><a href="klienditoimik.html" class="work-card-action mt-sm">Jätka →</a></div></div><div class="work-card work-card-accent info"><div><h3 class="work-card-title">AS Baltic Logistics — Ostuarve dübleerimine</h3><p class="work-card-meta">Periood: 12.2024 · 3 arvet · Viga: duplikaat</p><p>OCR tuvastas võimalikud duplikaadid. Vajab käsitsi kontrolli ja kinnitust.</p></div><div><span class="badge badge-info">Pooleli</span><div class="mt-sm text-muted">Henri Lember</div><a href="klienditoimik.html" class="work-card-action mt-sm">Jätka →</a></div></div><div class="work-card work-card-accent info"><div><h3 class="work-card-title">OÜ Saare Keskus — Palgaarvestus</h3><p class="work-card-meta">Periood: 01.2025 · 14 töötajat · Töötundide kinnitused ootel</p><p>Personaliosakond ei ole kinnitanud töötunde. TSD esitamine on edasi lükatud.</p></div><div><span class="badge badge-warning">Ootab infot</span><div class="mt-sm text-muted">Liis Märtin</div><a href="klienditoimik.html" class="work-card-action mt-sm">Jätka →</a></div></div></section>
+
+      <section id="sissetulek" class="section animate-in animate-delay-3"><header class="section-header"><h2 class="section-title">Sissetulek</h2></header><div class="panel"><div class="panel-body panel-body-condensed"><div class="table-wrapper"><table class="table"><thead><tr><th>Sisestatud</th><th>Klient</th><th>Tüüp</th><th>Allikas</th><th>Periood</th><th>Järgmine samm</th><th>Staatus</th></tr></thead><tbody><tr><td class="table-cell-muted">10:15</td><td class="table-cell-primary">MTÜ Kultuuripärand</td><td>Pangaväljavõte</td><td>SEB</td><td>01.2025</td><td>Klassifitseeri kanded</td><td><span class="badge badge-info">Uus</span></td></tr><tr><td class="table-cell-muted">09:42</td><td class="table-cell-primary">OÜ Mererand</td><td>Pangaväljavõte</td><td>SWED</td><td>01.2025</td><td>Kontrolli, klassifitseeri</td><td><span class="badge badge-warning">Kinnita</span></td></tr><tr><td class="table-cell-muted">09:38</td><td class="table-cell-primary">AS Baltic Logistics</td><td>Ostuarved (5)</td><td>E-post</td><td>12.2024</td><td>OCR kontroll</td><td><span class="badge badge-info">Töötlemine</span></td></tr><tr><td class="table-cell-muted">09:15</td><td class="table-cell-primary">OÜ Põhjala Kaubandus</td><td>Müügiarved (8)</td><td>eArve</td><td>01.2025</td><td>Kinnita ja saada</td><td><span class="badge badge-warning">Kinnita</span></td></tr></tbody></table></div></div></div></section>
+
+      <section id="kinnitused" class="section animate-in animate-delay-4"><header class="section-header"><h2 class="section-title">Vajab kinnitust</h2><span class="text-muted">14 tööd</span></header><div class="panel panel-accent warning"><div class="panel-header"><h3 class="panel-title">OCR otsused — kinnitustaotlused</h3></div><div class="panel-body panel-body-condensed"><div class="table-wrapper"><table class="table"><thead><tr><th>Klient</th><th>Dokument</th><th>Tuvastatud</th><th>Usaldus</th><th>Tegevus</th></tr></thead><tbody><tr><td class="table-cell-primary">OÜ Põhjala Kaubandus</td><td>Arve #2024-1247</td><td>Ost, KM 20%</td><td><span class="text-success">98%</span></td><td><a href="klienditoimik.html" class="section-link">Kinnita →</a></td></tr><tr><td class="table-cell-primary">AS Baltic Logistics</td><td>Arve #INV-2024-892</td><td>Ost, KM 20%</td><td><span class="text-warning">76%</span></td><td><a href="klienditoimik.html" class="section-link">Kontrolli →</a></td></tr></tbody></table></div></div></div></section>
+
+      <section id="blokeeringud" class="section animate-in animate-delay-5"><header class="section-header"><h2 class="section-title">Blokeeringud</h2><span class="text-danger">7 tööd</span></header><div class="note note-danger"><strong>Blokeeringud takistavad töö edenemist.</strong> Need nõuavad kohest tähelepanu.</div><div class="work-card work-card-accent danger"><div><h3 class="work-card-title">OÜ Põhjala Kaubandus — KMD esitamine</h3><p class="work-card-meta">Tähtaeg: täna, 17:00</p><p><strong>Puuduvad:</strong> ostuarved perioodist 12.2024.</p></div><div><span class="badge badge-danger">Blokeeritud</span><div class="mt-sm"><strong>Järgmine samm:</strong><p class="text-muted">Helista kliendile</p></div></div></div></section>
+
+      <section id="periood" class="section animate-in animate-delay-6"><header class="section-header"><h2 class="section-title">Perioodivaade</h2></header><div class="panel"><div class="panel-body panel-body-condensed"><div class="matrix"><div class="matrix-row matrix-header"><div class="matrix-cell">Klient</div><div class="matrix-cell">Pank</div><div class="matrix-cell">Müük</div><div class="matrix-cell">Ost</div><div class="matrix-cell">Aruanded</div></div><div class="matrix-row"><div class="matrix-cell matrix-label">OÜ Mererand</div><div class="matrix-cell" data-label="Pank"><span class="matrix-status"><span class="matrix-indicator complete"></span>Valmis</span></div><div class="matrix-cell" data-label="Müük"><span class="matrix-status"><span class="matrix-indicator complete"></span>Valmis</span></div><div class="matrix-cell" data-label="Ost"><span class="matrix-status"><span class="matrix-indicator pending"></span>Puudulik</span></div><div class="matrix-cell" data-label="Aruanded"><span class="matrix-status"><span class="matrix-indicator waiting"></span>Ootel</span></div></div></div></div></div></section>
+
+    </div></main>
+
+  </div>
+
+  <script src="assets/app.js"></script>
+
+</body>
+
+</html>
