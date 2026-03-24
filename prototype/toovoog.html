@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trikato OS — Töövoog</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="toovoog">
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand-mark">
+        <div class="brand-sigil" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <small>Trikato Accounting OS</small>
+          <strong>Töövoog</strong>
+        </div>
+      </div>
+      <p class="rail-intro">
+        Sisend, järjekord, blokeeringud ja kinnitused samal tööpinnal. Mõeldud inimesele, kes peab päeva jooksul otsuseid päriselt tegema.
+      </p>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Põhilehed</div>
+        <nav class="main-nav" aria-label="Põhinavigatsioon">
+          <a href="index.html"><span class="nav-index">01</span><span class="nav-copy"><strong>Ülevaade</strong><span>Tänane pilt ja koormus</span></span></a>
+          <a href="toovoog.html"><span class="nav-index">02</span><span class="nav-copy"><strong>Töövoog</strong><span>Jooks, sisend ja kinnitus</span></span></a>
+          <a href="vastavus.html"><span class="nav-index">03</span><span class="nav-copy"><strong>Vastavus</strong><span>Tähtaegade ja kohustuste laud</span></span></a>
+          <a href="klienditoimik.html"><span class="nav-index">04</span><span class="nav-copy"><strong>Klienditoimik</strong><span>Üks juhtum detailselt</span></span></a>
+        </nav>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Lehel</div>
+        <nav class="local-nav" aria-label="Selle lehe jaotised">
+          <a href="#pooleli-jada"><strong>Pooleli jada</strong><span>Mis nõuab kohe käiku</span></a>
+          <a href="#sisendlaud"><strong>Sisendilaud</strong><span>Uued failid, allikas ja periood</span></a>
+          <a href="#kinnitused"><strong>Vajab kinnitamist</strong><span>Raportid ja OCR otsused</span></a>
+          <a href="#blokeeringud"><strong>Blokeeringud</strong><span>Puuduvad pangad, ostud või vastused</span></a>
+          <a href="#perioodid"><strong>Perioodi kaupa</strong><span>Kuu sulgemise tempo</span></a>
+        </nav>
+      </div>
+
+      <div class="rail-note">
+        <strong>Töövoo põhimõte</strong>
+        <p>Kui rida on blokeeritud, peab järgmine tegevus olema kohe nähtav: kellelt küsida, mida oodata ja mis kuupäevast risk päriselt algab.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="page-block">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Operatsioonileht</div>
+            <h1>Pooleli töö ei ole üks nimekiri. See on sisend, otsus ja järjekord korraga.</h1>
+            <p>
+              Leht ühendab ideed, mis praegu elavad eraldi <span class="muted">ui.v_worker_work_queue</span>,
+              <span class="muted">ui.v_document_intake</span> ja jooksu staatuses. Töö ei kao vaadete vahele: failist kuni kinnitamiseni on üks pidev rada.
+            </p>
+            <div class="hero-actions">
+              <a class="hero-link" href="#pooleli-jada">Fookus: pooleli tööd</a>
+              <a class="hero-link" href="#kinnitused">Fookus: kinnitused</a>
+              <a class="hero-link" href="klienditoimik.html#ajajoon">Ava näidistoimik</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <h2>Tööpäeva pinge</h2>
+            <p>Näidisjuhtlaud Merilini tiimi jaoks. Selles vaates määrab tempo see, mis on pooleli, mitte see, milline tabel viimati avati.</p>
+            <ul class="hero-list">
+              <li><span>Uusi sisendfaile</span><span>17 viimase 90 minuti jooksul</span></li>
+              <li><span>Raporteid ootel</span><span>6 HTML + 3 OCR otsust</span></li>
+              <li><span>Blokeeringuid</span><span>9 kliendirida</span></li>
+              <li><span>Kiired sulgemised võimalikud</span><span>4 tööd vähem kui 10 minutiga</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-block section" id="pooleli-jada">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Filtreeritav tööjärg</div>
+            <h2>Ühe pilguga: mis on pooleli, mis blokeerib ja mis ootab kinnitamist.</h2>
+            <p>Filtrid on mõeldud kiireks fookuse vahetuseks. Kui JavaScript puudub, jääb kogu sisu nähtavaks ja loetavaks.</p>
+          </div>
+          <span class="section-tag">minu tänane töö</span>
+        </div>
+
+        <div class="filter-bar" data-filter-group="queue" data-filter-target=".filterable-queue">
+          <button class="filter-chip is-active" type="button" data-filter-value="all" aria-pressed="true">Kõik</button>
+          <button class="filter-chip" type="button" data-filter-value="pooleli" aria-pressed="false">Pooleli</button>
+          <button class="filter-chip" type="button" data-filter-value="kinnitamine" aria-pressed="false">Vajab kinnitamist</button>
+          <button class="filter-chip" type="button" data-filter-value="blokeeritud" aria-pressed="false">Blokeeritud</button>
+          <button class="filter-chip" type="button" data-filter-value="kiire" aria-pressed="false">Kiire sulgemine</button>
+        </div>
+
+        <div class="attention-grid">
+          <article class="quick-card tone-red filterable filterable-queue" data-filter-tags="pooleli blokeeritud">
+            <span class="panel-topline">Kuu sulgemine · märts</span>
+            <strong>Põhjatäht Stuudio OÜ</strong>
+            <p>Pank olemas, müük osaliselt sees, üks ostuarve viib KMD kontrolli kinni.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">Blokeeritud</span>
+              <span class="badge badge-warning">Ost puudu</span>
+              <span class="badge badge-neutral">tähtaeg 26.03</span>
+            </div>
+          </article>
+
+          <article class="quick-card tone-bronze filterable filterable-queue" data-filter-tags="pooleli kinnitamine">
+            <span class="panel-topline">Raport valmis</span>
+            <strong>Mererahu Kinnisvara OÜ</strong>
+            <p>Vastavusanalüüs jooksis lõpuni. Üks rendikulu vajab kinnitust enne Meritisse saatmist.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">Vajab kinnitamist</span>
+              <span class="badge badge-info">1 küsimus</span>
+            </div>
+          </article>
+
+          <article class="quick-card tone-moss filterable filterable-queue" data-filter-tags="pooleli kiire">
+            <span class="panel-topline">Kiire võit</span>
+            <strong>Vektor Tervisekeskus OÜ</strong>
+            <p>Kõik dokumendid olemas. Töörea sulgemiseks on vaja ainult raport kinnitada ja märkus salvestada.</p>
+            <div class="status-row">
+              <span class="badge badge-okay">Sulge 8 minutiga</span>
+              <span class="badge badge-neutral">HTML olemas</span>
+            </div>
+          </article>
+
+          <article class="quick-card tone-steel filterable filterable-queue" data-filter-tags="pooleli blokeeritud">
+            <span class="panel-topline">Kliendi vastus puudu</span>
+            <strong>Loomeriik MTÜ</strong>
+            <p>AA töö võib liikuda edasi kohe, kui juhatuse kinnituskiri ja aruande allkirjastaja on selged.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">Vastus ootel</span>
+              <span class="badge badge-neutral">partneri märkus lisatud</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="sisendlaud">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Sisendilaud</div>
+            <h2>Laekuvad dokumendid peavad näitama allikat, perioodi ja järgmise käsu.</h2>
+            <p>Allolev tabel on mõeldud asendama olukorda, kus töötaja peab korraga vaatama Drive’i kaustu, watcher’i logi ja eraldi intake tabelit.</p>
+          </div>
+          <span class="section-tag">drive · gmail · käsitsi</span>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Fail</th>
+                <th>Klient</th>
+                <th>Allikas</th>
+                <th>Periood</th>
+                <th>Liik</th>
+                <th>Järgmine samm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="filterable filterable-queue" data-filter-tags="pooleli">
+                <td class="strong">2026-03 LHV väljavõte.pdf</td>
+                <td>Põhjatäht Stuudio OÜ</td>
+                <td><span class="badge badge-info">Drive</span></td>
+                <td>Märts 2026</td>
+                <td>Pank</td>
+                <td>Seo puuduva ostu reaga</td>
+              </tr>
+              <tr class="filterable filterable-queue" data-filter-tags="pooleli kinnitamine">
+                <td class="strong">Rent_kulud_koond.xlsx</td>
+                <td>Mererahu Kinnisvara OÜ</td>
+                <td><span class="badge badge-neutral">Gmail</span></td>
+                <td>Veebruar 2026</td>
+                <td>Ost</td>
+                <td>Kontrolli aruande kõrvalekalle</td>
+              </tr>
+              <tr class="filterable filterable-queue" data-filter-tags="kiire">
+                <td class="strong">Müügiaruanne_02.xlsm</td>
+                <td>Vektor Tervisekeskus OÜ</td>
+                <td><span class="badge badge-info">Drive</span></td>
+                <td>Veebruar 2026</td>
+                <td>Müük</td>
+                <td>Raport valmis, kinnita</td>
+              </tr>
+              <tr class="filterable filterable-queue" data-filter-tags="blokeeritud">
+                <td class="strong">Juhatuse_kinnitus.docx</td>
+                <td>Loomeriik MTÜ</td>
+                <td><span class="badge badge-neutral">Käsitsi</span></td>
+                <td>AA 2024</td>
+                <td>Aastaaruanne</td>
+                <td>Oota allkirjastajat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="page-block section" id="kinnitused">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Kinnituse rida</div>
+            <h2>Valmis töö ei tohi jääda peitu raporti faili sisse.</h2>
+            <p>Kinnituse laud toob välja nii HTML raportid kui OCR otsused. Töötaja näeb enne klikku, kas küsimus on sisu, summa või dokumentide tervikluse kohta.</p>
+          </div>
+          <span class="section-tag">otsus, mitte logi</span>
+        </div>
+
+        <div class="dual-grid">
+          <article class="panel tone-moss filterable filterable-queue" data-filter-tags="kinnitamine kiire">
+            <span class="micro-label">HTML raport</span>
+            <h3>Vektor Tervisekeskus OÜ</h3>
+            <p>Kõrvalekalle 0,00 €. Pangarida, müük ja ost on joondatud. Vajalik tegevus: kinnita ja märgi lõpetatuks.</p>
+            <div class="status-row">
+              <span class="badge badge-okay">Valmis sulgemiseks</span>
+              <span class="badge badge-neutral">raport 08:12</span>
+            </div>
+          </article>
+
+          <article class="panel tone-bronze filterable filterable-queue" data-filter-tags="kinnitamine">
+            <span class="micro-label">OCR küsimus</span>
+            <h3>Mererahu Kinnisvara OÜ</h3>
+            <p>Rent vs hoolduskulu klassifitseerimine. Süsteem on kindel 74%, kuid enne Meritit vajab inimese otsust.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">Inimotsus vajalik</span>
+              <span class="badge badge-neutral">1 kõrvalekalle</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="blokeeringud">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Blokeeringud</div>
+            <h2>Kui töö on kinni, peab järgmine telefonikõne olema juba valmis.</h2>
+            <p>Blokeeringu kaart kuvab põhjuse, viimase kontakti ja mida täpselt oodatakse. See on koht, kus “Pooleli olevad asjad” saab struktureeritud kuju.</p>
+          </div>
+          <span class="section-tag">puudu, mitte ähmane</span>
+        </div>
+
+        <div class="note-stack">
+          <article class="note-card filterable filterable-queue" data-filter-tags="blokeeritud">
+            <strong>Põhjatäht Stuudio OÜ · OA-14 puudu</strong>
+            <p>Viimane märkus: “Müügiaruanne on olemas, kuid märtsi Adobe arve ei ole saabunud.” Järgmine samm: saada kliendile sama päeva meeldetuletus koos näitega, millist faili oodatakse.</p>
+          </article>
+          <article class="note-card filterable filterable-queue" data-filter-tags="blokeeritud">
+            <strong>Loomeriik MTÜ · juhatuse allkirjastaja kinnitamata</strong>
+            <p>AA rada ei saa liikuda esitamiseni. Viimane kontakt 21.03, vastust ei ole. Järgmine samm: partneri kõne, mitte uus e-kiri.</p>
+          </article>
+          <article class="note-card filterable filterable-queue" data-filter-tags="blokeeritud">
+            <strong>Kaldajoon Disain OÜ · pangakaart isiklik vs ettevõte</strong>
+            <p>Dokument on olemas, kuid maksekanne vajab selgitust. Süsteem märgib selle “vajab selgitust”, mitte “error”.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="perioodid">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Perioodi tempo</div>
+            <h2>Kuu sulgemise tunnetus peab tekkima voona, mitte filtrite kombinatsioonina.</h2>
+            <p>Kolonnid allpool näitavad, kuidas sama töötaja töö jaguneb sulgemisfaasi järgi. Eesmärk on näha, kus ummik hakkab tekkima.</p>
+          </div>
+          <span class="section-tag">kuujärgsed lained</span>
+        </div>
+
+        <div class="columns">
+          <section class="column">
+            <h3>Sisend saabus</h3>
+            <small>Failid on olemas, töö alles algab</small>
+            <ul class="queue-list">
+              <li class="queue-item"><strong>Põhjarada OÜ</strong><span>Pank + ost laekusid täna 07:58. Järgmine samm: loo jooks.</span></li>
+              <li class="queue-item"><strong>Hajus Väli OÜ</strong><span>Gmailist tulnud müügifail vajab kliendiga sidumist.</span></li>
+            </ul>
+          </section>
+          <section class="column">
+            <h3>Pooleli töötlemine</h3>
+            <small>Jooks käib või vajab lisadokumenti</small>
+            <ul class="queue-list">
+              <li class="queue-item"><strong>Mererahu Kinnisvara OÜ</strong><span>Raport valmis, rent vs hooldus vajab kinnitamist.</span></li>
+              <li class="queue-item"><strong>Kaldajoon Disain OÜ</strong><span>Pangaliigutus märgitud selgituse ootele.</span></li>
+            </ul>
+          </section>
+          <section class="column">
+            <h3>Valmis sulgemiseks</h3>
+            <small>Kinnituse järel saab töörea lõpetada</small>
+            <ul class="queue-list">
+              <li class="queue-item"><strong>Vektor Tervisekeskus OÜ</strong><span>Kõrvalekalle puudub. Ava raport, kinnita ja salvesta märkus.</span></li>
+              <li class="queue-item"><strong>Rannajoon Vara OÜ</strong><span>Müük ja ost klapivad, KMD staatus roheline.</span></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

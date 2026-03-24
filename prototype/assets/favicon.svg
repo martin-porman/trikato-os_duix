@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Trikato OS">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#fffaf1" stroke="#1f2430" stroke-width="2"/>
+  <path d="M16 20H48" stroke="#1f2430" stroke-width="4" stroke-linecap="round"/>
+  <path d="M16 32H48" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M16 44H48" stroke="#5f7153" stroke-width="4" stroke-linecap="round"/>
+</svg>

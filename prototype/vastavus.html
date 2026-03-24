@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trikato OS — Vastavus</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="vastavus">
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand-mark">
+        <div class="brand-sigil" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <small>Trikato Accounting OS</small>
+          <strong>Vastavus</strong>
+        </div>
+      </div>
+      <p class="rail-intro">
+        TSD, KMD ja aastaaruande töö ei tohi peituda ainult nõuete tabelisse. Tähtaeg peab ise esile tulema.
+      </p>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Põhilehed</div>
+        <nav class="main-nav" aria-label="Põhinavigatsioon">
+          <a href="index.html"><span class="nav-index">01</span><span class="nav-copy"><strong>Ülevaade</strong><span>Tänane koondpilt</span></span></a>
+          <a href="toovoog.html"><span class="nav-index">02</span><span class="nav-copy"><strong>Töövoog</strong><span>Sisend ja kinnitused</span></span></a>
+          <a href="vastavus.html"><span class="nav-index">03</span><span class="nav-copy"><strong>Vastavus</strong><span>Tähtajad ja kohustused</span></span></a>
+          <a href="klienditoimik.html"><span class="nav-index">04</span><span class="nav-copy"><strong>Klienditoimik</strong><span>Juhtum detailis</span></span></a>
+        </nav>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Lehel</div>
+        <nav class="local-nav" aria-label="Selle lehe jaotised">
+          <a href="#tahtajad"><strong>Tähtajad</strong><span>Järgmised 14 päeva</span></a>
+          <a href="#kuuvaade"><strong>Kuuvaade</strong><span>TSD, KMD, pank, müük ja ost</span></a>
+          <a href="#aastaaruanne"><strong>Aastaaruanne</strong><span>AA rada ja puuduvad artefaktid</span></a>
+          <a href="#eskaleerimine"><strong>Eskaleerimine</strong><span>Mis tuleb viia partnerini</span></a>
+        </nav>
+      </div>
+
+      <div class="rail-note">
+        <strong>Vastavuse põhimõte</strong>
+        <p>Kui tähtaja risk on olemas, peab süsteem näitama kohe, kas probleem on dokumentides, ajas või otsustusõiguses.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="page-block">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Tähtaegade laud</div>
+            <h1>Vastavus ei ole lihtsalt staatus. See on nähtav risk koos järgmise sammuga.</h1>
+            <p>
+              See leht tõlgib <span class="muted">ui.v_monthly_compliance</span> ja <span class="muted">ui.v_annual_report_pipeline</span>
+              inimesele loetavaks töölaudseks. TSD, KMD, AA ja puuduva sisendi seisud jooksevad ühe visuaalse pingeväljaga kokku.
+            </p>
+            <div class="hero-actions">
+              <a class="hero-link" href="#tahtajad">Ava 14 päeva vaade</a>
+              <a class="hero-link" href="#aastaaruanne">Ava AA rada</a>
+              <a class="hero-link" href="toovoog.html#blokeeringud">Vaata blokke töövoos</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <h2>Vastavuse pulss</h2>
+            <p>Näidisandmed on kujundatud Trikato kuutöö ja aastaaruande päris mõistete järgi: TSD, KMD, pank, müük, ost, AA, Äriregister.</p>
+            <ul class="hero-list">
+              <li><span>Tähtaeg 14 päeva sees</span><span>9 rida</span></li>
+              <li><span>AA rada kollases</span><span>5 klienti</span></li>
+              <li><span>Kuu sulgemine pank puudu</span><span>4 klienti</span></li>
+              <li><span>Partneri otsust vajav</span><span>3 juhtumit</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-block section" id="tahtajad">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Järgmised 14 päeva</div>
+            <h2>Tähtajad peavad ilmuma ajas, mitte ainult filtris.</h2>
+            <p>Täna, 7 päeva ja 14 päeva vaade teevad ilmseks, kas probleem on lähedal, kohe käes või juba partneri tähelepanu vajav.</p>
+          </div>
+          <span class="section-tag">tähtaegade jada</span>
+        </div>
+
+        <div class="filter-bar" data-filter-group="compliance" data-filter-target=".filterable-compliance">
+          <button class="filter-chip is-active" type="button" data-filter-value="all" aria-pressed="true">Kõik</button>
+          <button class="filter-chip" type="button" data-filter-value="tahtaeg" aria-pressed="false">Tähtajad</button>
+          <button class="filter-chip" type="button" data-filter-value="aa" aria-pressed="false">Aastaaruanne</button>
+          <button class="filter-chip" type="button" data-filter-value="risk" aria-pressed="false">Risk</button>
+        </div>
+
+        <div class="triple-grid">
+          <article class="stack-card tone-red filterable filterable-compliance" data-filter-tags="tahtaeg risk">
+            <span class="micro-label">Täna + 3 päeva</span>
+            <h3>TSD kontroll vajab lõppotsust</h3>
+            <p>Põhjatäht Stuudio OÜ ja Kaldajoon Disain OÜ on mõlemad seisus, kus kanded on tehtud, kuid lõppkontrolli kinnitus puudub.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">2 kriitilist</span>
+              <span class="badge badge-neutral">kohe hommikul</span>
+            </div>
+          </article>
+
+          <article class="stack-card tone-bronze filterable filterable-compliance" data-filter-tags="tahtaeg risk">
+            <span class="micro-label">4–7 päeva</span>
+            <h3>KMD sõltub puuduva ostu selgitusest</h3>
+            <p>Mererahu Kinnisvara OÜ ja Põhjarada OÜ ei saa KMD rida roheliseks enne, kui üks kuluartikkel on selgitatud.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">vajab kliendivastust</span>
+              <span class="badge badge-neutral">2 klienti</span>
+            </div>
+          </article>
+
+          <article class="stack-card tone-moss filterable filterable-compliance" data-filter-tags="aa tahtaeg">
+            <span class="micro-label">8–14 päeva</span>
+            <h3>Aastaaruanne läheneb esitusaknasse</h3>
+            <p>Loomeriik MTÜ, Vana-Sadama Teenused OÜ ja Metsapiir OÜ vajavad partneri kontrolli, enne kui AA rada saab “esitamiseks valmis”.</p>
+            <div class="status-row">
+              <span class="badge badge-info">AA tähelepanu</span>
+              <span class="badge badge-neutral">3 klienti</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="kuuvaade">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Kuutöö maatriks</div>
+            <h2>TSD, KMD, pank, ost ja müük peavad mahtuma ühele reale.</h2>
+            <p>See vaade on mõeldud asendama eraldi tabelid ja kommentaarid. Kui rida on kollane või punane, peab põhjus olema kohe samas reas nähtav.</p>
+          </div>
+          <span class="section-tag">ui.v_monthly_compliance</span>
+        </div>
+
+        <div class="panel tone-steel">
+          <div class="ledger-grid">
+            <div class="ledger-row ledger-head">
+              <div>Klient</div>
+              <div>TSD</div>
+              <div>KMD</div>
+              <div>Pank</div>
+              <div>Ost / Müük</div>
+            </div>
+            <div class="ledger-row">
+              <div><strong>Põhjatäht Stuudio OÜ</strong><span class="muted">märts 2026 · Merilin R.</span></div>
+              <div><span class="badge badge-okay">kontrollitud</span></div>
+              <div><span class="badge badge-warning">ootab</span></div>
+              <div><span class="badge badge-okay">olemas</span></div>
+              <div><span class="badge badge-alert">ost puudu</span></div>
+            </div>
+            <div class="ledger-row">
+              <div><strong>Mererahu Kinnisvara OÜ</strong><span class="muted">veebruar 2026 · Anett K.</span></div>
+              <div><span class="badge badge-okay">roheline</span></div>
+              <div><span class="badge badge-warning">kinnituse ootel</span></div>
+              <div><span class="badge badge-okay">olemas</span></div>
+              <div><span class="badge badge-warning">klass vaja</span></div>
+            </div>
+            <div class="ledger-row">
+              <div><strong>Kaldajoon Disain OÜ</strong><span class="muted">märts 2026 · Liis O.</span></div>
+              <div><span class="badge badge-warning">küsimus</span></div>
+              <div><span class="badge badge-neutral">ei alga</span></div>
+              <div><span class="badge badge-alert">selgitus puudu</span></div>
+              <div><span class="badge badge-info">müük olemas</span></div>
+            </div>
+            <div class="ledger-row">
+              <div><strong>Vektor Tervisekeskus OÜ</strong><span class="muted">veebruar 2026 · Markus T.</span></div>
+              <div><span class="badge badge-okay">suletud</span></div>
+              <div><span class="badge badge-okay">suletud</span></div>
+              <div><span class="badge badge-okay">olemas</span></div>
+              <div><span class="badge badge-okay">joondatud</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-block section" id="aastaaruanne">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Aastaaruande rada</div>
+            <h2>AA töö peab jooksma oma tempoga, mitte kaduma kuu sulgemise sisse.</h2>
+            <p>Siin on aastaaruanne omaette rada: materjalid, registri seis, puuduvad artefaktid ja märkus, mis selgitab, miks töö just nüüd seisab.</p>
+          </div>
+          <span class="section-tag">ui.v_annual_report_pipeline</span>
+        </div>
+
+        <div class="dual-grid">
+          <article class="panel tone-red filterable filterable-compliance" data-filter-tags="aa risk">
+            <span class="micro-label">Punane tsoon</span>
+            <h3>Loomeriik MTÜ · AA 2024</h3>
+            <p>Bilanss koondatud, kuid juhatuse allkirjastaja kinnitamata. Äriregistri staatus on “ootab materjali”.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">AA puudu: allkiri</span>
+              <span class="badge badge-neutral">tähtaeg 31.03</span>
+            </div>
+            <ul class="plain-list">
+              <li><strong>Puuduvad artefaktid</strong><span>juhatuse kinnitus, viimane pearaamatu kontroll</span></li>
+              <li><strong>Viimane märkus</strong><span>“Partner peab helistama, uus e-kiri ei aita.”</span></li>
+            </ul>
+          </article>
+
+          <article class="panel tone-bronze filterable filterable-compliance" data-filter-tags="aa">
+            <span class="micro-label">Kollane tsoon</span>
+            <h3>Vana-Sadama Teenused OÜ · AA 2024</h3>
+            <p>AA failid koos, aga äriregistri viide ja lõplik memo on lisamata. Töö võib liikuda ühe kontrolli järel.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">AA puudu: registri kontroll</span>
+              <span class="badge badge-neutral">tähtaeg 05.04</span>
+            </div>
+            <ul class="plain-list">
+              <li><strong>Puuduvad artefaktid</strong><span>äriregister, lõppmärkuse kinnitus</span></li>
+              <li><strong>Viimane märkus</strong><span>“Materjal koos, vaja lõpetada ühe istumisega.”</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="eskaleerimine">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Partneri laud</div>
+            <h2>Mõned read vajavad otsust, mitte lihtsalt rohkem aega.</h2>
+            <p>Eskaleerimine ei tohi olla suusõnaline. Allpool on kolm tüüpi juhtumit, mis tuleb süsteemis eristada juba enne koosolekut.</p>
+          </div>
+          <span class="section-tag">otsustusõigus</span>
+        </div>
+
+        <div class="note-stack">
+          <article class="note-card filterable filterable-compliance" data-filter-tags="risk">
+            <strong>Klassifitseerimisvaidlus</strong>
+            <p>Kui süsteem ja töötaja ei ole kuluklassis kindlad, tuleb see märkida “partneri otsus”, mitte jätta märkuste lõppu.</p>
+          </article>
+          <article class="note-card filterable filterable-compliance" data-filter-tags="aa risk">
+            <strong>AA allkirjastaja teadmata</strong>
+            <p>See ei ole tavaline “puuduv dokument”, vaid rolli- ja vastutuse küsimus. Süsteem peab selle nähtavalt eristama.</p>
+          </article>
+          <article class="note-card filterable filterable-compliance" data-filter-tags="tahtaeg risk">
+            <strong>Tähtaeg sees, kuid vastus ootel</strong>
+            <p>Kui kliendi vastus lükkab TSD või KMD rea edasi, tuleb näha, mis kuupäevast alates risk muutub punaseks.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

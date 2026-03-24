@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trikato OS — Klienditoimik</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="klienditoimik">
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand-mark">
+        <div class="brand-sigil" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <small>Trikato Accounting OS</small>
+          <strong>Klienditoimik</strong>
+        </div>
+      </div>
+      <p class="rail-intro">
+        Ühe kliendi töö peab avanema ühe tervikuna: seis, ajajoon, dokumendid, müük, raport, küsimused ja järgmine otsus.
+      </p>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Põhilehed</div>
+        <nav class="main-nav" aria-label="Põhinavigatsioon">
+          <a href="index.html"><span class="nav-index">01</span><span class="nav-copy"><strong>Ülevaade</strong><span>Koondpilt kogu tiimile</span></span></a>
+          <a href="toovoog.html"><span class="nav-index">02</span><span class="nav-copy"><strong>Töövoog</strong><span>Pooleli tööd ja sisend</span></span></a>
+          <a href="vastavus.html"><span class="nav-index">03</span><span class="nav-copy"><strong>Vastavus</strong><span>Tähtajad ja AA rada</span></span></a>
+          <a href="klienditoimik.html"><span class="nav-index">04</span><span class="nav-copy"><strong>Klienditoimik</strong><span>Juhtum detailis</span></span></a>
+        </nav>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Lehel</div>
+        <nav class="local-nav" aria-label="Selle lehe jaotised">
+          <a href="#seis"><strong>Seis</strong><span>Olukord täna</span></a>
+          <a href="#ajajoon"><strong>Ajajoon</strong><span>Mis toimus, mis järgmine</span></a>
+          <a href="#dokumendid"><strong>Dokumendid</strong><span>Pank, ost, müük, puudu</span></a>
+          <a href="#kinnitamine"><strong>Kinnitamine</strong><span>Raport, müük, Merit</span></a>
+          <a href="#markmed"><strong>Märkmed</strong><span>“Pooleli olevad asjad” uues vormis</span></a>
+        </nav>
+      </div>
+
+      <div class="rail-note">
+        <strong>Toimiku põhimõte</strong>
+        <p>Klienditoimik ei ole lihtsalt kaart. See on koht, kus vabas vormis töömälu muutub jagatavaks, kontrollitavaks ja sulgetavaks tööks.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="page-block">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Näidistoimik</div>
+            <h1>Põhjatäht Stuudio OÜ on üks kliendivaade, kus töö, dokument ja otsus kohtuvad.</h1>
+            <p>
+              Prototüübi toimik ühendab kliendi üldseisu, kuutöö staatuse, müügiarved, puuduva ostu, HTML raporti ja viimased märkused ühte silmajoonesse.
+              See on sama töö, mis täna jaotub märkmete, töövihikute, kaustade ja vaadete vahel.
+            </p>
+            <div class="hero-actions">
+              <a class="hero-link" href="#dokumendid">Ava dokumendijada</a>
+              <a class="hero-link" href="#kinnitamine">Ava kinnitusrida</a>
+              <a class="hero-link" href="toovoog.html#pooleli-jada">Tagasi tööjärjekorda</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <h2>Kliendi meta</h2>
+            <p>Sanitiseeritud näidis, aga kujundatud päris Trikato töö mõistete järgi: kuu sulgemine, KMD, pangad, ostud, müügid, raport ja märkused.</p>
+            <ul class="hero-list">
+              <li><span>Peamine töötaja</span><span>Merilin R.</span></li>
+              <li><span>Teenused</span><span>Igakuine raamatupidamine · Aastaaruanne</span></li>
+              <li><span>Viimane müügiarve</span><span>TRK-2026-0314</span></li>
+              <li><span>Seis täna</span><span>KMD ootel · ostudokument puudu</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-block section" id="seis">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Olukord täna</div>
+            <h2>Kõigepealt peab töötaja mõistma, kus klient praegu seisab.</h2>
+            <p>Seisukaart koondab samale pinnale kliendi staatuse, aktiivsed teenused, viimase märkuse, müügiarvete mahu ja poolelioleva kuu töörea.</p>
+          </div>
+          <span class="section-tag">ui.v_clients_overview + v_main_data_table</span>
+        </div>
+
+        <div class="story-grid">
+          <article class="panel tone-steel">
+            <span class="micro-label">Kliendiseis</span>
+            <h3>Aktiivne · märts 2026 töörea all</h3>
+            <div class="stat-grid">
+              <div class="stat-box">
+                <strong>3</strong>
+                <span>aktiivset teenusliini</span>
+              </div>
+              <div class="stat-box">
+                <strong>14</strong>
+                <span>dokumenti viimase 30 päeva sees</span>
+              </div>
+              <div class="stat-box">
+                <strong>2</strong>
+                <span>avatud küsimust kliendile</span>
+              </div>
+              <div class="stat-box">
+                <strong>€12.4k</strong>
+                <span>müügiarved selle kvartali sees</span>
+              </div>
+            </div>
+            <div class="status-row">
+              <span class="badge badge-info">Kuu sulgemine pooleli</span>
+              <span class="badge badge-warning">KMD ootel</span>
+              <span class="badge badge-alert">OA-14 puudu</span>
+            </div>
+          </article>
+
+          <article class="panel tone-bronze">
+            <span class="micro-label">Viimane märkus</span>
+            <h3>“Kõik on koos peale ühe Adobe ostu.”</h3>
+            <p>
+              Viimane töömärkus on seotud täpselt selle töörea ja perioodiga, mitte rippuv eraldi workbooki leht. Töötaja näeb nii sisu kui aega:
+              23.03 kell 16:48 · “müügiaruanne klapib, puudu on vaid Adobe märtsiarve”.
+            </p>
+            <div class="status-row">
+              <span class="badge badge-neutral">märge salvestatud</span>
+              <span class="badge badge-info">järgmine tegevus: meeldetuletus</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="ajajoon">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Ajajoon</div>
+            <h2>Kogu juhtum peab olema loetav nagu tööpäevik, mitte nagu toorlogi.</h2>
+            <p>Ajajoon ühendab sisendi, inimese märkuse, vastavusjooksu, kliendikontakti ja järgmise otsuse üheks järjestuseks.</p>
+          </div>
+          <span class="section-tag">liikumine, mitte väljalõiked</span>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <time>18.03</time>
+            <div><strong>Drive’i kausta laekus pangaväljavõte.</strong><span>Allikas seoti kliendi ja märtsi perioodiga automaatselt.</span></div>
+          </li>
+          <li>
+            <time>20.03</time>
+            <div><strong>Müügiaruanne imporditi.</strong><span>Müügi kogusumma sobitus töörea eelmise prognoosiga, kõrvalekalle 0,4%.</span></div>
+          </li>
+          <li>
+            <time>23.03</time>
+            <div><strong>Raamatupidaja lisas märkuse “Adobe arve puudu”.</strong><span>Töörea staatus muutus automaatselt: <em>ost puudu</em>.</span></div>
+          </li>
+          <li>
+            <time>24.03</time>
+            <div><strong>HTML raport valmis osalise märgiga.</strong><span>Süsteem lubab sulgeda kohe pärast puuduva ostu laekumist või käsitsi põhjendatud otsust.</span></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="page-block section" id="dokumendid">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Dokumendijada</div>
+            <h2>Pank, ost, müük ja küsimused peavad elama samas toimikus.</h2>
+            <p>Dokumendivaade ei näita lihtsalt faile, vaid nende kasutusvalmidust: kas dokument on olemas, kontrollitud, seotud või veel puudu.</p>
+          </div>
+          <span class="section-tag">pank · ost · müük</span>
+        </div>
+
+        <div class="dual-grid">
+          <article class="panel tone-moss">
+            <span class="micro-label">Dokumentide kontrollnimekiri</span>
+            <h3>Märts 2026</h3>
+            <ul class="plain-list">
+              <li><strong>Pank</strong><span><span class="badge badge-okay">olemas</span> LHV väljavõte seotud, 142 rida töödeldud.</span></li>
+              <li><strong>Müük</strong><span><span class="badge badge-okay">olemas</span> Müügiaruanne imporditud, kokku 18 arverida.</span></li>
+              <li><strong>Ost</strong><span><span class="badge badge-alert">puudu</span> Adobe märtsiarve ootab kliendilt saabumist.</span></li>
+              <li><strong>Kliendi küsimus</strong><span><span class="badge badge-warning">avatud</span> Kas Canva litsents läheb turundusse või üldkulusse?</span></li>
+            </ul>
+          </article>
+
+          <article class="panel tone-bronze">
+            <span class="micro-label">Puuduvate dokumentide tähendus</span>
+            <h3>Puuduv fail ei ole pelgalt “tulemata dokument”.</h3>
+            <p>Kui dokument puudub, peab süsteem ütlema, mida see päriselt peatab: KMD, kuu sulgemist, HTML raporti kinnitust või ainult informatiivset täiustust.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">peatab KMD</span>
+              <span class="badge badge-neutral">kliendikontakt 24.03 09:10</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="kinnitamine">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Raport ja kinnitamine</div>
+            <h2>Kui raport on valmis, peab järgmine otsus olema otse selle kõrval.</h2>
+            <p>Kinnituse ala seob kokku HTML raporti, müügiarve info, vastavusanalüüsi kokkuvõtte ja Meritisse saatmise valmisoleku.</p>
+          </div>
+          <span class="section-tag">otsus · põhjendus · saatmine</span>
+        </div>
+
+        <div class="worker-grid">
+          <article class="panel tone-steel">
+            <span class="micro-label">Raportiseis</span>
+            <h3>HTML raport valmis, kuid lõppotsus pooleli</h3>
+            <ul class="plain-list">
+              <li><strong>Vastavus</strong><span>Pank ja müük joondatud. Ostudes üks lahtine dokument.</span></li>
+              <li><strong>Mõju</strong><span>KMD ei saa lukustuda enne, kui Adobe arve laekub või tehakse põhjendatud käsitsi otsus.</span></li>
+              <li><strong>Soovituslik tegevus</strong><span>Saada kliendile kohe meeldetuletus ja ava kinnituse valik “ootan sisendit”.</span></li>
+            </ul>
+            <div class="status-row">
+              <span class="badge badge-warning">Vajab kinnitamist</span>
+              <span class="badge badge-neutral">raport 24.03 08:24</span>
+            </div>
+          </article>
+
+          <article class="panel tone-red">
+            <span class="micro-label">Müügi ja esituse kokkuvõte</span>
+            <h3>Mida töötaja peab enne saatmist nägema</h3>
+            <div class="metric-row">
+              <article class="metric-card tone-steel">
+                <strong>18</strong>
+                <span>müügiarverida perioodis</span>
+              </article>
+              <article class="metric-card tone-moss">
+                <strong>€4.260</strong>
+                <span>koondsumma raportis</span>
+              </article>
+              <article class="metric-card tone-bronze">
+                <strong>1</strong>
+                <span>lahtine küsimus enne Meritit</span>
+              </article>
+            </div>
+            <p>Kui küsimusi on null, peab nupp olema “Saada edasi”. Kui küsimus on üks, peab olema “Oota sisendit” või “Tee käsitsi otsus koos märkusega”.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="markmed">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Märkmed ja suhtlus</div>
+            <h2>“Pooleli olevad asjad” peab muutuma nähtavaks, seotud töömälu kihiks.</h2>
+            <p>Allolevad märkmed on kujundatud nii, et vaba tekst on seotud kliendi, perioodi ja töörea mõjuga. See on parem kui eraldi fail, kus kontekst hajub.</p>
+          </div>
+          <span class="section-tag">töömälu, mis ei kao</span>
+        </div>
+
+        <div class="note-stack">
+          <article class="note-card">
+            <strong>24.03 · kliendile saadetud meeldetuletus</strong>
+            <p>Paluti Adobe märtsiarvet ning selgitati, et ilma selleta jääb KMD rida kollaseks. Vastust oodatakse hiljemalt 25.03 lõunaks.</p>
+          </article>
+          <article class="note-card">
+            <strong>23.03 · sisemine tähelepanek</strong>
+            <p>Müügiaruanne on tavapärasest puhtam, seega kui ostuarve laekub, saab töörea sulgeda sama päeva jooksul ilma partneri eskalatsioonita.</p>
+          </article>
+          <article class="note-card">
+            <strong>20.03 · eelmise kuu õppetund</strong>
+            <p>Sama kliendi puhul tekkis viivitus siis, kui puuduva faili mõju polnud nähtav. Uues toimikus on “peatab KMD” kohe märkusest kõrval näha.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

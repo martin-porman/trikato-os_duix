@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trikato OS — Ülevaade</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body data-page="index">
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand-mark">
+        <div class="brand-sigil" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <small>Trikato Accounting OS</small>
+          <strong>Ülevaade</strong>
+        </div>
+      </div>
+      <p class="rail-intro">
+        Töötaja-esimene juhtlaud Trikato igapäevase raamatupidamise, tähtaegade ja kinnitamiste jaoks.
+      </p>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Põhilehed</div>
+        <nav class="main-nav" aria-label="Põhinavigatsioon">
+          <a href="index.html"><span class="nav-index">01</span><span class="nav-copy"><strong>Ülevaade</strong><span>Tänane pilt, koormus ja häired</span></span></a>
+          <a href="toovoog.html"><span class="nav-index">02</span><span class="nav-copy"><strong>Töövoog</strong><span>Sisend, järjekord ja kinnitused</span></span></a>
+          <a href="vastavus.html"><span class="nav-index">03</span><span class="nav-copy"><strong>Vastavus</strong><span>TSD, KMD, AA ja tähtajad</span></span></a>
+          <a href="klienditoimik.html"><span class="nav-index">04</span><span class="nav-copy"><strong>Klienditoimik</strong><span>Üks kliendijuhtum otsast lõpuni</span></span></a>
+        </nav>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Lehel</div>
+        <nav class="local-nav" aria-label="Selle lehe jaotised">
+          <a href="#tahelepanu"><strong>Vajab tähelepanu</strong><span>Prioriteetsed kliendid ja riskid</span></a>
+          <a href="#koormus"><strong>Tiimi koormus</strong><span>Kes kannab, kes ootab, kes kinnitab</span></a>
+          <a href="#sisend"><strong>Sisend ja pipeline</strong><span>Drive, Gmail, OCR ja raportid</span></a>
+          <a href="#kiirvaated"><strong>Kiirvaated</strong><span>Sissepääs järgmistele tööekraanidele</span></a>
+        </nav>
+      </div>
+
+      <div class="rail-note">
+        <strong>Juhtpõhimõte</strong>
+        <p>
+          Baserow ja vaated on lugemiskiht. Töötaja tajub ainult seda, mis on pooleli, mis on puudu ja mida saab kohe sulgeda.
+        </p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="page-block">
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Töölaua avavaade</div>
+            <h1>Trikato OS paneb päevase töö järjekorda, mitte juhuse hooleks.</h1>
+            <p>
+              See prototüüp tõstab nähtavale sama töörea, mida praegused <span class="muted">ui.v_main_data_table</span>,
+              <span class="muted">ui.v_clients_overview</span> ja tööpaketi dokumendid kirjeldavad, aga palju selgema
+              operaatoriloogikaga: kellel on blokk, kellel on puudu dokumendid, milline raport vajab kinnitamist ja mis tuleb täna ära sulgeda.
+            </p>
+            <div class="hero-actions">
+              <a class="hero-link" href="toovoog.html#pooleli-jada">Ava tänane tööjärk</a>
+              <a class="hero-link" href="vastavus.html#tahtajad">Vaata tähtaegu</a>
+              <a class="hero-link" href="klienditoimik.html#seis">Ava klienditoimik</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside" aria-labelledby="hero-kokkuvote">
+            <h2 id="hero-kokkuvote">Täna kell 08:40</h2>
+            <p>Koondvaade 19 töötajale. Numbrid on näidisandmed, kuid vorm on joondatud olemasolevate Trikato vaadete ja tööloogikaga.</p>
+            <ul class="hero-list">
+              <li><span>Uued dokumendid laekunud</span><span>43 faili · 6 kliendikausta</span></li>
+              <li><span>Raportid vajavad kinnitamist</span><span>14 juhtumit</span></li>
+              <li><span>Tähtaeg järgmise 7 päeva jooksul</span><span>9 kliendirida</span></li>
+              <li><span>Blokeeringud, mis ootavad vastust</span><span>12 avatud märkust</span></li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="kpi-strip">
+          <article class="kpi-card tone-red">
+            <span class="kpi-label">Pooleli</span>
+            <strong class="kpi-value">126</strong>
+            <span class="kpi-meta">aktiivset töörea kirjet üle kuu- ja aastavaadete</span>
+          </article>
+          <article class="kpi-card tone-bronze">
+            <span class="kpi-label">Vajab kinnitamist</span>
+            <strong class="kpi-value">14</strong>
+            <span class="kpi-meta">HTML raportit või OCR-jooksu ootab otsust</span>
+          </article>
+          <article class="kpi-card tone-moss">
+            <span class="kpi-label">Puuduvad dokumendid</span>
+            <strong class="kpi-value">38</strong>
+            <span class="kpi-meta">pank, ost või müük pole töö lõpetamiseks piisav</span>
+          </article>
+          <article class="kpi-card tone-steel">
+            <span class="kpi-label">Aastaaruanne</span>
+            <strong class="kpi-value">27</strong>
+            <span class="kpi-meta">rada avatud, neist 5 vajab partneri sekkumist</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="tahelepanu">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Eesmine töölaud</div>
+            <h2>Vajab tähelepanu enne, kui päev laguneb laiali.</h2>
+            <p>
+              Need kaardid on mõeldud asendama hajusad märkused, lahtised spreadsheet-read ja “küsi hiljem” olukorrad ühe selge hommikuse fookusega.
+            </p>
+          </div>
+          <span class="section-tag">eskaleeri varakult</span>
+        </div>
+
+        <div class="attention-grid">
+          <a class="quick-card tone-red" href="vastavus.html#tahtajad">
+            <span class="panel-topline">Tähtaja risk</span>
+            <strong>Aastaaruanne venib</strong>
+            <p>Kolm klienti on AA raja viimases kolmandikus, kuid bilanss või pearaamat pole veel kinnitatud.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">5 kriitilist</span>
+              <span class="badge badge-neutral">täna kell 15:00</span>
+            </div>
+            <span class="mini-link">Ava vastavuse laud</span>
+          </a>
+
+          <a class="quick-card tone-bronze" href="toovoog.html#blokeeringud">
+            <span class="panel-topline">Puuduv sisend</span>
+            <strong>Ost ja pank ei klapi</strong>
+            <p>Kuuerivides on 11 juhtumit, kus pangakanne on olemas, kuid ostudokumendi vaste või periood puudub.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">11 blokkivat</span>
+              <span class="badge badge-neutral">vajab kliendikõnet</span>
+            </div>
+            <span class="mini-link">Ava blokeeringud</span>
+          </a>
+
+          <a class="quick-card tone-moss" href="toovoog.html#kinnitused">
+            <span class="panel-topline">Raportirivi</span>
+            <strong>HTML raport valmis</strong>
+            <p>Seitse jooksu on jõudnud kinnituse ootele. Need tuleks sulgeda enne uue sisendilaine algust.</p>
+            <div class="status-row">
+              <span class="badge badge-okay">7 valmis</span>
+              <span class="badge badge-neutral">kiire võit</span>
+            </div>
+            <span class="mini-link">Ava kinnitused</span>
+          </a>
+
+          <a class="quick-card tone-steel" href="klienditoimik.html#markmed">
+            <span class="panel-topline">Kliendimärkus</span>
+            <strong>“Pooleli olevad asjad” nähtaval</strong>
+            <p>Vabas vormis küsimused ja riskid peavad elama sama toomiku sees, mitte eraldi töövihikus või Slacki sõnumis.</p>
+            <div class="status-row">
+              <span class="badge badge-info">märkmed seotud</span>
+              <span class="badge badge-neutral">toimikupõhine</span>
+            </div>
+            <span class="mini-link">Ava märkmete vaade</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="page-block section" id="koormus">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Tiim jaotuses</div>
+            <h2>Koormus peab näitama nii mahtu kui ka hõõrdumist.</h2>
+            <p>Üksnes tööde arv ei aita. Töötaja juhilaual peab olema korraga näha avatud read, välised blokkijad ja kinnitamist ootav maht.</p>
+          </div>
+          <span class="section-tag">19 töötajat</span>
+        </div>
+
+        <div class="worker-grid">
+          <article class="panel tone-steel">
+            <span class="micro-label">Koormuse ristlõige</span>
+            <h3>Tiimi fookus täna</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Töötaja</th>
+                    <th>Avatud</th>
+                    <th>Blokeeritud</th>
+                    <th>Vajab kinnitamist</th>
+                    <th>Tähtajad 7p</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="strong">Merilin R.</td>
+                    <td>18</td>
+                    <td><span class="badge badge-warning">4</span></td>
+                    <td>3</td>
+                    <td><span class="badge badge-alert">2</span></td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Anett K.</td>
+                    <td>14</td>
+                    <td><span class="badge badge-warning">2</span></td>
+                    <td>4</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Markus T.</td>
+                    <td>11</td>
+                    <td>1</td>
+                    <td><span class="badge badge-okay">5</span></td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">Liis O.</td>
+                    <td>16</td>
+                    <td><span class="badge badge-alert">5</span></td>
+                    <td>2</td>
+                    <td><span class="badge badge-warning">3</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel tone-bronze">
+            <span class="micro-label">Juhi tähelepanek</span>
+            <h3>Mis koormuse all tegelikult juhtub</h3>
+            <ul class="rule-list">
+              <li><strong>Kinnituse rida koguneb pärastlõunal.</strong><span>Kui HTML raporti kinnitamine jääb päeva lõppu, tekib õhtuks tarbetu saba.</span></li>
+              <li><strong>Blokid on koondunud pank + ost kombinatsiooni ümber.</strong><span>Töötajal peab olema üks vaade, kus puuduv sisend ja järgmine samm on samas reas.</span></li>
+              <li><strong>Aastaaruanne vajab eraldi tempot.</strong><span>AA tööd ei tohi uppuda kuu sulgemise sisse, sest tähtaja risk tekib märkamatult.</span></li>
+            </ul>
+            <div class="value-note">Soovituslik liides: tööjärjekord, mis lubab vahetada pilgu “minu tänane töö” ja “vajab partnerit” vahel ühe klõpsuga.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="sisend">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Sisend ja pipeline</div>
+            <h2>Faili teekond peab olema nähtav ilma logifaile lugemata.</h2>
+            <p>Drive, Gmail, OCR, vastavusanalüüs ja Merit on üks järjestikune rada. Töötaja ei peaks mõtlema teenusepiiridele, vaid järgmisele otsusele.</p>
+          </div>
+          <span class="section-tag">seisukiht</span>
+        </div>
+
+        <div class="triple-grid">
+          <article class="stack-card tone-moss">
+            <span class="micro-label">Drive / Gmail</span>
+            <h3>Sisendilaud</h3>
+            <p>Laekuvad failid jaotuvad kohe kliendi, perioodi ja allika järgi. Eesmärk on null “kuhu see nüüd panna?” hetke.</p>
+            <div class="status-row">
+              <span class="badge badge-okay">Drive delta roheline</span>
+              <span class="badge badge-info">Gmail intake mõõdukas</span>
+            </div>
+          </article>
+
+          <article class="stack-card tone-bronze">
+            <span class="micro-label">OCR / sobitamine</span>
+            <h3>Vastavusanalüüs</h3>
+            <p>OCR jooks toob välja pangarea, müügi ja ostu suhte. Kui usaldus on madal, jõuab see kohe kinnituse lauale, mitte peidetud logisse.</p>
+            <div class="status-row">
+              <span class="badge badge-warning">6 madala kindlusega</span>
+              <span class="badge badge-neutral">vajab ülevaatust</span>
+            </div>
+          </article>
+
+          <article class="stack-card tone-steel">
+            <span class="micro-label">Raport / Merit</span>
+            <h3>Valmiv väljund</h3>
+            <p>Kui raport on olemas, peab töötaja nägema kohe, kas järgmiseks sammuks on kinnitamine, Meritisse saatmine või kliendile küsimus.</p>
+            <div class="status-row">
+              <span class="badge badge-alert">2 kinnitust hilineb</span>
+              <span class="badge badge-okay">12 saadetud</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-block section" id="kiirvaated">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Järgmine samm</div>
+            <h2>Kiirvaated avavad töö, mitte menüüpuud.</h2>
+            <p>Iga kaart allpool läheb päriselt olemasolevale lehele ja konkreetsele ankrujaotisele. Prototüübis ei ole ühtegi katkist linki ega pimedat nurka.</p>
+          </div>
+          <span class="section-tag">navigeeritav artefakt</span>
+        </div>
+
+        <div class="quick-grid">
+          <a class="quick-card tone-red" href="toovoog.html#pooleli-jada">
+            <strong>Tänane tööjärjekord</strong>
+            <p>Näita operatsioonilehte, kus sisend, blokk ja kinnitused on ühel pinnal.</p>
+            <span class="mini-link">Ava töövoog</span>
+          </a>
+          <a class="quick-card tone-bronze" href="vastavus.html#aastaaruanne">
+            <strong>Aastaaruande rada</strong>
+            <p>Vaata, kuidas AA töö liigub materjalist kuni esitamiseni, koos puuduvate tõenditega.</p>
+            <span class="mini-link">Ava vastavus</span>
+          </a>
+          <a class="quick-card tone-moss" href="klienditoimik.html#dokumendid">
+            <strong>Üks klienditoimik</strong>
+            <p>Näe, kuidas dokument, märkus, müük ja kinnitamine saavad ühe juhtumi sees kokku.</p>
+            <span class="mini-link">Ava toimik</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="footer-note">
+        <p>Prototüüp kasutab Trikato olemasolevaid töökontseptsioone: tööread, puuduva sisendi staatused, AA rada, HTML raporti kinnitamine ja kliendipõhine märkmete juhtimine.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
